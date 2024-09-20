@@ -1,0 +1,15 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-title>asignaturas</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <div class="asignaturas-container">
+    <div class="asignatura-card" *ngFor="let asignatura of asignaturas">
+      {{ asignatura.nombre }}
+    </div>
+   <!-- Retorno -->
+  <ion-button class="boton-retorno" color="danger" (click)="goToInicio()">Volver a Inicio</ion-button>
+  </div>
+</ion-content>

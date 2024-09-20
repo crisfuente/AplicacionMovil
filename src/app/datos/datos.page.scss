@@ -1,0 +1,36 @@
+ion-content {
+    --background: #ffffff; /* Fondo blanco */
+    padding: 20px;
+    position: relative;
+  }
+  
+  ion-card {
+    margin: 20px 0;
+  }
+  
+  ion-list {
+    margin: 0;
+  }
+  
+  ion-item {
+    --padding-start: 0; /* Elimina el relleno a la izquierda */
+    --inner-padding-end: 10px; /* Ajusta el relleno interno a la derecha */
+    display: flex;
+    justify-content: space-between;
+  }
+  
+  ion-label {
+    font-weight: bold;
+  }
+  
+  ion-text {
+    margin-left: 10px;
+  }
+  
+  .boton-retorno {
+    position: fixed;
+    bottom: 30px; /* Ajusta la distancia desde el borde inferior */
+    left: 10px;   /* Ajusta la distancia desde el borde izquierdo */
+    z-index: 100; /* Asegura que el botón esté visible sobre el contenido */
+  }
+  

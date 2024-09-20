@@ -1,0 +1,78 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <!-- Botón del menú lateral a la izquierda -->
+    <ion-buttons slot="end">
+      <ion-menu-button auto-hide="false"></ion-menu-button>
+    </ion-buttons>
+    <ion-title class="titulo">Bienvenido {{}}</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<!-- Contenido principal -->
+<ion-content [fullscreen]="true" id="main-content">
+  <ion-grid fixed>
+    <!-- Opción 1: Ver Asignaturas -->
+    <ion-row>
+      <ion-col size="12">
+        <ion-card class="small-card">
+          <ion-card-header>
+            <h4>Opción 1</h4>
+            <ion-card-subtitle>Asignaturas inscritas</ion-card-subtitle>
+          </ion-card-header>
+          <ion-card-content>
+            <ion-button expand="block" size="small" color="warning" (click)="goToAsignaturas()">Ver Asignaturas</ion-button>
+          </ion-card-content>
+        </ion-card>
+      </ion-col>
+    </ion-row>
+
+    <!-- Opción 2: Ver Asistencias -->
+    <ion-row>
+      <ion-col size="12">
+        <ion-card class="small-card">
+          <ion-card-header>
+            <h4>Opción 2</h4>
+            <ion-card-subtitle>Mis asistencias</ion-card-subtitle>
+          </ion-card-header>
+          <ion-card-content>
+            <ion-button expand="block" size="small" color="warning" (click)="goToAsistencia()">Ver asistencia</ion-button>
+          </ion-card-content>
+        </ion-card>
+      </ion-col>
+    </ion-row>
+
+    <!-- Opción 3: Ver Datos de Usuario -->
+    <ion-row>
+      <ion-col size="12">
+        <ion-card class="small-card">
+          <ion-card-header>
+            <h4>Opción 3</h4>
+            <ion-card-subtitle>Datos de usuario</ion-card-subtitle>
+          </ion-card-header>
+          <ion-card-content>
+            <ion-button expand="block" size="small" color="warning" (click)="goToDatos()">Ver mis datos</ion-button>
+          </ion-card-content>
+        </ion-card>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+</ion-content>
+
+<!-- Menú lateral que se abre a la derecha -->
+<ion-menu side="end" menuId="first" contentId="main-content">
+  <ion-header>
+    <ion-toolbar>
+      <ion-title></ion-title>
+    </ion-toolbar>
+  </ion-header>
+
+  <ion-content>
+    <ion-list>
+      <!-- Ítem del menú para cerrar sesión -->
+      <ion-item button (click)="goToLogin()" color="danger">
+        <ion-icon slot="start" name="log-out-outline"></ion-icon>
+        <ion-label>Cerrar Sesión</ion-label>
+      </ion-item>
+    </ion-list>
+  </ion-content>
+</ion-menu>
